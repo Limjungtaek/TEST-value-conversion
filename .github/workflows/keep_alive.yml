@@ -11,6 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send a request to the app
-        run: |
-          curl -s -L -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" \
-          https://test-value-conversion-hmpjwbxab85ndns6t52efb.streamlit.app/ > /dev/null
+        run: curl -s -L -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://test-value-conversion-hmpjwbxab85ndns6t52efb.streamlit.app/ > /dev/null
