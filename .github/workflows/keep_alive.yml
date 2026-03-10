@@ -2,9 +2,8 @@ name: Keep Streamlit App Alive
 
 on:
   schedule:
-    # 6시간마다 한 번씩 실행 (하루 4회)
     - cron: '0 */6 * * *'
-  workflow_dispatch: # 수동 실행 가능
+  workflow_dispatch:  # <--- 이 부분이 반드시 있어야 수동 실행 버튼이 생깁니다.
 
 jobs:
   ping:
