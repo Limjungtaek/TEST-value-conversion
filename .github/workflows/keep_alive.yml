@@ -3,11 +3,12 @@ name: Keep Streamlit App Alive
 on:
   schedule:
     - cron: '0 */6 * * *'
-  workflow_dispatch:  # <--- 이 부분이 반드시 있어야 수동 실행 버튼이 생깁니다.
+  workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
       - name: Send a request to the app
-        run: curl -s -L -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" https://test-value-conversion-hmpjwbxab85ndns6t52efb.streamlit.app/ > /dev/null
+        run: |
+          curl -s -L -H "User-Agent: Mozilla/5.0" https://test-value-conversion-hmpjwbxab85ndns6t52efb.streamlit.app/
